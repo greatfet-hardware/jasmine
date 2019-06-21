@@ -660,44 +660,6 @@ F 7 "DNP" H 5000 4450 50  0000 C CNN "Note"
 	0    1    -1   0   
 $EndComp
 NoConn ~ 4400 3600
-$Comp
-L Device:R R6
-U 1 1 5A0B8DD0
-P 7050 7600
-F 0 "R6" V 7130 7600 50  0000 C CNN
-F 1 "0" V 7050 7600 50  0000 C CNN
-F 2 "gsg-modules:0603" H 6980 7600 50  0001 C CNN
-F 3 "" H 7050 7600 50  0000 C CNN
-F 4 "Yageo" H 7050 7600 60  0001 C CNN "Manufacturer"
-F 5 "RC0603JR-070RL" H 7050 7600 60  0001 C CNN "Part Number"
-F 6 "RES SMD 0.0OHM JUMPER 1/10W 0603" H 7050 7600 60  0001 C CNN "Description"
-	1    7050 7600
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint_2Pole W1
-U 1 1 5A0B9184
-P 7050 8200
-F 0 "W1" H 7050 8260 50  0000 C CNN
-F 1 "TEST" H 7050 8130 50  0000 C CNN
-F 2 "gsg-modules:0603-JUMPER" H 7050 8200 50  0001 C CNN
-F 3 "" H 7050 8200 50  0000 C CNN
-F 4 "DNP" H 7050 8200 60  0001 C CNN "Note"
-	1    7050 8200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint_2Pole W2
-U 1 1 5A0B9211
-P 7050 8000
-F 0 "W2" H 7050 8060 50  0000 C CNN
-F 1 "TEST" H 7050 7930 50  0000 C CNN
-F 2 "gsg-modules:0603-JUMPER" H 7050 8000 50  0001 C CNN
-F 3 "" H 7050 8000 50  0000 C CNN
-F 4 "DNP" H 7050 8000 60  0001 C CNN "Note"
-	1    7050 8000
-	1    0    0    -1  
-$EndComp
 NoConn ~ 14900 3850
 NoConn ~ 14900 3950
 NoConn ~ 14900 4050
@@ -1784,20 +1746,9 @@ Wire Wire Line
 Wire Wire Line
 	6700 6600 6700 7600
 Wire Wire Line
-	6700 7600 6900 7600
-Wire Wire Line
-	7200 7600 7250 7600
-Wire Wire Line
-	7250 7600 7250 8000
-Connection ~ 7250 8000
-Wire Wire Line
 	5050 8000 5050 7500
 Wire Wire Line
 	5050 8000 6850 8000
-Wire Wire Line
-	4850 7500 4850 8200
-Wire Wire Line
-	4850 8200 6850 8200
 Wire Wire Line
 	5500 4250 5500 4900
 Wire Wire Line
@@ -2592,15 +2543,9 @@ F 5 " 74LVC1G3157DW-7 " H 8750 8050 50  0001 C CNN "Part Number"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7250 8000 7250 8150
-Wire Wire Line
 	10200 8150 9050 8150
 Wire Wire Line
 	8450 8150 7250 8150
-Connection ~ 7250 8150
-Wire Wire Line
-	7250 8150 7250 8200
-NoConn ~ 8450 7950
 $Comp
 L power:GND #PWR0122
 U 1 1 5CE5EA1A
@@ -2676,10 +2621,35 @@ Wire Wire Line
 	9050 7950 9500 7950
 Text Label 9500 7950 2    50   ~ 0
 P4_5
-Text Notes 8350 8600 0    40   ~ 0
-Switch for ADC protection.\nIf another neighbor needs to use the ADC\n(on the same pin), use this switch to "cut"\nthe trace between the header and the\nresistors on the voltage divider.
+Text Notes 8300 9050 0    40   ~ 0
+Switch for ADC protection.\nIf another neighbor needs to use the ADC\n(on the same pin), use this switch to "cut"\nthe trace between the header and the\n\n\nDo we want to pick another ADC pin for B1 to go to?\nresistors on the voltage divider.
 Text Notes 3700 1950 0    50   ~ 0
 Input voltage SHOULD NOT\nEXCEED 6V. If the input voltage\nexceeds 6V, you will damage\nthe MCP73831T.
 Wire Wire Line
 	9750 4250 9750 5700
+Wire Wire Line
+	7250 7600 7250 8150
+$Comp
+L Jumper:Jumper_3_Open JP1
+U 1 1 5D07C5D9
+P 6850 8250
+F 0 "JP1" V 6896 8337 50  0000 L CNN
+F 1 "Jumper_3_Open" V 6805 8337 50  0000 L CNN
+F 2 "gsg-modules:0603-JUMPER_3" H 6850 8250 50  0001 C CNN
+F 3 "~" H 6850 8250 50  0001 C CNN
+	1    6850 8250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6850 8500 4850 8500
+Wire Wire Line
+	4850 7500 4850 8500
+Wire Wire Line
+	8450 7950 7800 7950
+Wire Wire Line
+	7800 7950 7800 8250
+Wire Wire Line
+	7000 8250 7800 8250
+Wire Wire Line
+	6700 7600 7250 7600
 $EndSCHEMATC
