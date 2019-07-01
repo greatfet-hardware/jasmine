@@ -1097,8 +1097,6 @@ Wire Wire Line
 Wire Wire Line
 	8650 5850 8650 6000
 Wire Wire Line
-	8650 6100 9450 6100
-Wire Wire Line
 	9450 6100 9450 4250
 Wire Wire Line
 	8200 5850 8200 6000
@@ -2475,13 +2473,6 @@ F 7 "LED_2" H 6550 1850 50  0000 C CNN "Note"
 	1    0    0    -1  
 $EndComp
 Connection ~ 8800 4250
-Wire Wire Line
-	9200 4250 9200 3750
-Connection ~ 9200 4250
-Wire Wire Line
-	9200 4250 9250 4250
-Text Label 9200 3750 3    50   ~ 0
-LOAD
 Text Label 15800 3750 2    40   ~ 0
 VCC
 Wire Wire Line
@@ -2575,8 +2566,6 @@ Wire Wire Line
 Wire Wire Line
 	8950 4900 8950 4250
 Connection ~ 8950 4250
-Wire Wire Line
-	8950 4250 9200 4250
 $Comp
 L Connector:TestPoint TP6
 U 1 1 5CC06B6D
@@ -2657,14 +2646,25 @@ Wire Wire Line
 Wire Wire Line
 	6700 7500 6700 6600
 $Comp
-L Jumper:Jumper_2_Bridged JP?
+L Jumper:Jumper_2_Bridged JP2
 U 1 1 5D202D9B
 P 7250 7850
-F 0 "JP?" V 7296 7762 50  0000 R CNN
+F 0 "JP2" V 7296 7762 50  0000 R CNN
 F 1 "Jumper_2_Bridged" V 7205 7762 50  0000 R CNN
 F 2 "gsg-modules:0603-JUMPER" H 7250 7850 50  0001 C CNN
 F 3 "~" H 7250 7850 50  0001 C CNN
 	1    7250 7850
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	9100 6100 9100 5600
+Text Label 9100 5600 3    50   ~ 0
+LOAD
+Wire Wire Line
+	8650 6100 9100 6100
+Wire Wire Line
+	9100 6100 9450 6100
+Connection ~ 9100 6100
+Wire Wire Line
+	8950 4250 9250 4250
 $EndSCHEMATC
