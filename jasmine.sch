@@ -611,7 +611,7 @@ F 3 "" H 11900 8900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 10300 2050 0    60   ~ 0
-Default charge rate is set to 15mAh.\nUse GreatFET to reconfigure charge rate,\nor populate R? to change default charge rate.\nFIXME Add specific values for R?.
+Default charge rate is set to 15mAh.\nUse GreatFET to reconfigure charge rate,\nor populate R17 to change default charge rate.\nFIXME Add specific values for R17.
 NoConn ~ 4900 3950
 NoConn ~ 4900 4050
 NoConn ~ 4900 4150
@@ -1096,8 +1096,6 @@ Wire Wire Line
 	9250 5350 9250 4250
 Wire Wire Line
 	8650 5850 8650 6000
-Wire Wire Line
-	8650 6100 9450 6100
 Wire Wire Line
 	9450 6100 9450 4250
 Wire Wire Line
@@ -1743,8 +1741,6 @@ Wire Wire Line
 	5350 7000 5350 6600
 Wire Wire Line
 	5350 6600 6700 6600
-Wire Wire Line
-	6700 6600 6700 7600
 Wire Wire Line
 	5050 8000 5050 7500
 Wire Wire Line
@@ -2477,13 +2473,6 @@ F 7 "LED_2" H 6550 1850 50  0000 C CNN "Note"
 	1    0    0    -1  
 $EndComp
 Connection ~ 8800 4250
-Wire Wire Line
-	9200 4250 9200 3750
-Connection ~ 9200 4250
-Wire Wire Line
-	9200 4250 9250 4250
-Text Label 9200 3750 3    50   ~ 0
-LOAD
 Text Label 15800 3750 2    40   ~ 0
 VCC
 Wire Wire Line
@@ -2545,7 +2534,7 @@ $EndComp
 Wire Wire Line
 	10200 8150 9050 8150
 Wire Wire Line
-	8450 8150 7250 8150
+	8450 8150 7800 8150
 $Comp
 L power:GND #PWR0122
 U 1 1 5CE5EA1A
@@ -2577,8 +2566,6 @@ Wire Wire Line
 Wire Wire Line
 	8950 4900 8950 4250
 Connection ~ 8950 4250
-Wire Wire Line
-	8950 4250 9200 4250
 $Comp
 L Connector:TestPoint TP6
 U 1 1 5CC06B6D
@@ -2622,13 +2609,11 @@ Wire Wire Line
 Text Label 9500 7950 2    50   ~ 0
 P4_5
 Text Notes 8300 9050 0    40   ~ 0
-Switch for ADC protection.\nIf another neighbor needs to use the ADC\n(on the same pin), use this switch to "cut"\nthe trace between the header and the\n\n\nDo we want to pick another ADC pin for B1 to go to?\nresistors on the voltage divider.
+Switch for ADC protection.\nIf another neighbor needs to use the ADC\n(on the same pin), use this switch to "cut"\nthe trace between the header and the\nresistors on the voltage divider.\n\n
 Text Notes 3700 1950 0    50   ~ 0
 Input voltage SHOULD NOT\nEXCEED 6V. If the input voltage\nexceeds 6V, you will damage\nthe MCP73831T.
 Wire Wire Line
 	9750 4250 9750 5700
-Wire Wire Line
-	7250 7600 7250 8150
 $Comp
 L Jumper:Jumper_3_Open JP1
 U 1 1 5D07C5D9
@@ -2645,11 +2630,41 @@ Wire Wire Line
 Wire Wire Line
 	4850 7500 4850 8500
 Wire Wire Line
-	8450 7950 7800 7950
-Wire Wire Line
-	7800 7950 7800 8250
-Wire Wire Line
 	7000 8250 7800 8250
+NoConn ~ 8450 7950
 Wire Wire Line
-	6700 7600 7250 7600
+	7800 8250 7800 8150
+Connection ~ 7800 8150
+Wire Wire Line
+	7800 8150 7250 8150
+Wire Wire Line
+	7250 8150 7250 8050
+Wire Wire Line
+	7250 7650 7250 7500
+Wire Wire Line
+	7250 7500 6700 7500
+Wire Wire Line
+	6700 7500 6700 6600
+$Comp
+L Jumper:Jumper_2_Bridged JP2
+U 1 1 5D202D9B
+P 7250 7850
+F 0 "JP2" V 7296 7762 50  0000 R CNN
+F 1 "Jumper_2_Bridged" V 7205 7762 50  0000 R CNN
+F 2 "gsg-modules:0603-JUMPER" H 7250 7850 50  0001 C CNN
+F 3 "~" H 7250 7850 50  0001 C CNN
+	1    7250 7850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9100 6100 9100 5600
+Text Label 9100 5600 3    50   ~ 0
+LOAD
+Wire Wire Line
+	8650 6100 9100 6100
+Wire Wire Line
+	9100 6100 9450 6100
+Connection ~ 9100 6100
+Wire Wire Line
+	8950 4250 9250 4250
 $EndSCHEMATC
