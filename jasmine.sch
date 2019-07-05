@@ -552,10 +552,10 @@ F 3 "" H 9050 4100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 P5
+L Connector_Generic:Conn_01x02 J6
 U 1 1 59FE3399
 P 10100 3900
-F 0 "P5" H 10100 4000 50  0000 C CNN
+F 0 "J6" H 10100 4000 50  0000 C CNN
 F 1 "3.7_VDC" V 10200 3850 50  0000 C CNN
 F 2 "gsg-modules:HEADER-1x2" H 10100 3900 50  0001 C CNN
 F 3 "" H 10100 3900 50  0000 C CNN
@@ -630,10 +630,10 @@ F 6 "DIODE SCHOTTKY 30V 5A SOD128" H 6900 5950 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 P2
+L Connector_Generic:Conn_01x02 J10
 U 1 1 5A023FAE
 P 6950 6450
-F 0 "P2" H 6950 6600 50  0000 C CNN
+F 0 "J10" H 6950 6600 50  0000 C CNN
 F 1 "TEST_POINT" V 7050 6450 50  0000 C CNN
 F 2 "gsg-modules:HEADER-1x2" H 6950 6450 50  0001 C CNN
 F 3 "" H 6950 6450 50  0000 C CNN
@@ -645,10 +645,10 @@ F 7 "DNP" H 6950 6200 50  0000 C CNN "Note"
 	0    -1   1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 P1
+L Connector_Generic:Conn_01x02 J9
 U 1 1 5A024B4D
 P 5000 4700
-F 0 "P1" H 5000 4850 50  0000 C CNN
+F 0 "J9" H 5000 4850 50  0000 C CNN
 F 1 "TEST_POINT" V 5100 4700 50  0000 C CNN
 F 2 "gsg-modules:HEADER-1x2" H 5000 4700 50  0001 C CNN
 F 3 "" H 5000 4700 50  0000 C CNN
@@ -1041,10 +1041,10 @@ $EndComp
 Wire Wire Line
 	8200 5550 8200 5400
 $Comp
-L Connector:Screw_Terminal_01x02 P4
+L Connector:Screw_Terminal_01x02 J11
 U 1 1 5C570651
 P 10450 4900
-F 0 "P4" H 10450 5050 50  0000 C CNN
+F 0 "J11" H 10450 5050 50  0000 C CNN
 F 1 "3.7_VDC" V 10550 4900 50  0000 C CNN
 F 2 "gsg-modules:TerminalBlock_4UCON_19963_02x3.5mm_Straight" H 10450 4900 50  0001 C CNN
 F 3 "" H 10450 4900 50  0001 C CNN
@@ -1716,12 +1716,12 @@ L Device:R R27
 U 1 1 5C7B0824
 P 11450 8000
 F 0 "R27" V 11350 7950 50  0000 L CNN
-F 1 "0" V 11450 8000 50  0000 C CNN
+F 1 "100k" V 11450 8000 50  0000 C CNN
 F 2 "gsg-modules:0603" V 11380 8000 50  0001 C CNN
 F 3 "" H 11450 8000 50  0001 C CNN
 F 4 "Stackpole" H 11450 8000 50  0001 C CNN "Manufacturer"
-F 5 "RMCF0603ZT0R00" H 11450 8000 50  0001 C CNN "Part Number"
-F 6 "RES 0 OHM JUMPER 1/10W 0603" H 11450 8000 50  0001 C CNN "Description"
+F 5 "RMCF0603FG100K" H 11450 8000 50  0001 C CNN "Part Number"
+F 6 "RES 100K OHM 1% 1/10W 0603" H 11450 8000 50  0001 C CNN "Description"
 	1    11450 8000
 	0    1    1    0   
 $EndComp
@@ -2021,10 +2021,10 @@ $EndComp
 Wire Wire Line
 	6500 2000 6400 2000
 $Comp
-L Connector:Screw_Terminal_01x02 P3
+L Connector:Screw_Terminal_01x02 J8
 U 1 1 5C80F0CF
 P 4500 2100
-F 0 "P3" H 4500 2250 50  0000 C CNN
+F 0 "J8" H 4500 2250 50  0000 C CNN
 F 1 "INPUT" V 4600 2100 50  0000 C CNN
 F 2 "gsg-modules:TerminalBlock_4UCON_19963_02x3.5mm_Straight" H 4500 2100 50  0001 C CNN
 F 3 "" H 4500 2100 50  0001 C CNN
@@ -2667,4 +2667,6 @@ Wire Wire Line
 Connection ~ 9100 6100
 Wire Wire Line
 	8950 4250 9250 4250
+Text Notes 1600 4300 0    50   ~ 0
+Change silkscreen to show the default value\n\nlabel "input" terminal with max voltage\n\nChange "P"s to "J"s\n\nClean up silkscreen over vias.
 $EndSCHEMATC
