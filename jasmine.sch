@@ -2667,6 +2667,4 @@ Wire Wire Line
 Connection ~ 9100 6100
 Wire Wire Line
 	8950 4250 9250 4250
-Text Notes 1600 4300 0    50   ~ 0
-Change silkscreen to show the default value\n\nlabel "input" terminal with max voltage\n\nChange "P"s to "J"s\n\nClean up silkscreen over vias.
 $EndSCHEMATC
