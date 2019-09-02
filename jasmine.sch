@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:jasmine-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
@@ -1799,11 +1799,11 @@ L gsg-symbols:PCA9674 U4
 U 1 1 5C7D6073
 P 12350 4000
 F 0 "U4" H 12350 4552 40  0000 C CNN
-F 1 "PCA9674" H 12350 4476 40  0000 C CNN
+F 1 "TCA9534A" H 12350 4476 40  0000 C CNN
 F 2 "gsg-modules:TSSOP16" H 12350 4000 40  0001 C CNN
 F 3 "" H 12350 4000 40  0000 C CNN
-F 4 "NXP" H 12350 4000 50  0001 C CNN "Manufacturer"
-F 5 "PCA9674PW,118" H 12350 4000 50  0001 C CNN "Part Number"
+F 4 "Texas Instruments" H 12350 4000 50  0001 C CNN "Manufacturer"
+F 5 "TCA9534APWR" H 12350 4000 50  0001 C CNN "Part Number"
 F 6 "IC I/O EXPANDER I2C 8B 16TSSOP" H 12350 4000 50  0001 C CNN "Description"
 	1    12350 4000
 	1    0    0    -1  
@@ -2197,7 +2197,7 @@ Wire Wire Line
 Wire Wire Line
 	11450 3750 11450 3650
 Text Notes 11700 2900 0    40   ~ 0
-Extra pads are available for (limited)\nreconfiguration of I2C address.
+Default 7-bit I2C address: 0x3D\nExtra pads are available for (limited)\nreconfiguration of I2C address.
 Wire Wire Line
 	12300 8450 13050 8450
 $Comp

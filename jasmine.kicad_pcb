@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.1.2-f72e74a~84~ubuntu18.04.1)
+(kicad_pcb (version 20171130) (host pcbnew 5.0.2+dfsg1-1)
 
   (general
     (thickness 1.6)
@@ -42,6 +42,8 @@
     (zone_clearance 0.2032)
     (zone_45_only no)
     (trace_min 0.2032)
+    (segment_width 0.15)
+    (edge_width 0.15)
     (via_size 0.762)
     (via_drill 0.3302)
     (via_min_size 0.6858)
@@ -54,8 +56,6 @@
     (uvias_allowed no)
     (uvia_min_size 0)
     (uvia_min_drill 0)
-    (edge_width 0.15)
-    (segment_width 0.15)
     (pcb_text_width 0.3)
     (pcb_text_size 1.5 1.5)
     (mod_edge_width 0.2032)
@@ -1045,7 +1045,7 @@
     (fp_text reference U4 (at 1.3 0 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value PCA9674 (at -0.4 -0.1 90) (layer F.SilkS) hide
+    (fp_text value TCA9534A (at -0.4 -0.1 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_circle (center -1.7 -2) (end -1.7 -2.2) (layer F.SilkS) (width 0.15))
