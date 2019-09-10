@@ -1246,7 +1246,7 @@ Wire Wire Line
 Text Label 16150 7400 1    50   ~ 0
 VCC
 Text Label 3250 7650 3    50   ~ 0
-VCC
+VBAT
 Text Label 4450 9100 2    50   ~ 0
 RTCX1
 $Comp
@@ -2687,4 +2687,6 @@ F 3 "https://www.diodes.com/assets/Datasheets/AP2204.pdf" H 1300 7200 50  0001 C
 	1    1300 7100
 	1    0    0    -1  
 $EndComp
+Text Notes 8300 6600 0    50   ~ 0
+Add a digital load switch in parallel\nwith the manual load switch.\nDigital load swtich should be configured to be OFF.
 $EndSCHEMATC
