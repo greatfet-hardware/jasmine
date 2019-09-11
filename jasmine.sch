@@ -2699,4 +2699,6 @@ Wire Wire Line
 	3250 8050 3250 7400
 Text Label 3250 7400 3    50   ~ 0
 VBAT
+Text Notes 5950 8850 0    50   ~ 0
+To switch to a different ADC pin,\ncut JP2 and connect the appropriate\nside of JP1.
 $EndSCHEMATC
