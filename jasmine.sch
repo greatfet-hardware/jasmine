@@ -904,8 +904,6 @@ Wire Wire Line
 Wire Wire Line
 	15450 7550 15450 7200
 Wire Wire Line
-	15350 7550 15350 7200
-Wire Wire Line
 	15250 7550 15250 7200
 Wire Wire Line
 	14950 7550 14950 7200
@@ -1241,12 +1239,8 @@ Wire Wire Line
 	3250 8850 3250 8950
 Wire Wire Line
 	3950 9100 4450 9100
-Wire Wire Line
-	3250 8050 3250 7650
 Text Label 16150 7400 1    50   ~ 0
 VCC
-Text Label 3250 7650 3    50   ~ 0
-VBAT
 Text Label 4450 9100 2    50   ~ 0
 RTCX1
 $Comp
@@ -2665,28 +2659,44 @@ F 6 " IC I/O EXPANDER 16BIT 24TSSOP" H 12650 4150 50  0001 C CNN "Description"
 	1    12650 4150
 	1    0    0    -1  
 $EndComp
-$Comp
-L gsg-symbols:MIC94310 U?
-U 1 1 5D7CA587
-P 2300 7050
-F 0 "U?" H 2578 7103 60  0000 L CNN
-F 1 "MIC94310" H 2578 6997 60  0000 L CNN
-F 2 "" H 2300 7050 60  0001 C CNN
-F 3 "" H 2300 7050 60  0001 C CNN
-	1    2300 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:AP2204K-3.0 U?
-U 1 1 5D7D1D0D
-P 1300 7100
-F 0 "U?" H 1300 7442 50  0000 C CNN
-F 1 "AP2204K-3.0" H 1300 7351 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1300 7425 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2204.pdf" H 1300 7200 50  0001 C CNN
-	1    1300 7100
-	1    0    0    -1  
-$EndComp
 Text Notes 8300 6600 0    50   ~ 0
 Add a digital load switch in parallel\nwith the manual load switch.\nDigital load swtich should be configured to be OFF.
+$Comp
+L gsg-symbols:AP2120 U?
+U 1 1 5D82ED6F
+P 15400 8450
+F 0 "U?" V 15453 8272 60  0000 R CNN
+F 1 "AP2120" V 15347 8272 60  0000 R CNN
+F 2 "" H 15400 8450 60  0000 C CNN
+F 3 "" H 15400 8450 60  0000 C CNN
+	1    15400 8450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	15450 7950 15450 7850
+$Comp
+L power:GND #PWR?
+U 1 1 5D8AC32F
+P 15750 7850
+F 0 "#PWR?" H 15750 7600 50  0001 C CNN
+F 1 "GND" V 15755 7722 50  0000 R CNN
+F 2 "" H 15750 7850 50  0001 C CNN
+F 3 "" H 15750 7850 50  0001 C CNN
+	1    15750 7850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	15750 7850 15450 7850
+Wire Wire Line
+	15350 7200 15350 7950
+Wire Wire Line
+	15400 8950 15400 9050
+Wire Wire Line
+	15400 9050 14800 9050
+Text Label 14800 9050 0    50   ~ 0
+BATT
+Wire Wire Line
+	3250 8050 3250 7400
+Text Label 3250 7400 3    50   ~ 0
+VBAT
 $EndSCHEMATC
