@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:jasmine-cache
 EELAYER 30 0
 EELAYER END
 $Descr USLedger 17000 11000
@@ -2376,6 +2375,7 @@ F 0 "JP1" V 6896 8337 50  0000 L CNN
 F 1 "Jumper_3_Open" V 6805 8337 50  0000 L CNN
 F 2 "gsg-modules:0603-JUMPER_3" H 6850 8250 50  0001 C CNN
 F 3 "~" H 6850 8250 50  0001 C CNN
+F 4 "DNP" H 6850 8250 50  0001 C CNN "Note"
 	1    6850 8250
 	0    -1   -1   0   
 $EndComp
@@ -2407,6 +2407,7 @@ F 0 "JP2" V 7296 7762 50  0000 R CNN
 F 1 "Jumper_2_Bridged" V 7205 7762 50  0000 R CNN
 F 2 "gsg-modules:0603-JUMPER" H 7250 7850 50  0001 C CNN
 F 3 "~" H 7250 7850 50  0001 C CNN
+F 4 "DNP" H 7250 7850 50  0001 C CNN "Note"
 	1    7250 7850
 	0    -1   -1   0   
 $EndComp
@@ -3016,17 +3017,6 @@ Wire Wire Line
 Wire Wire Line
 	8600 6350 8600 6550
 $Comp
-L Device:R R40
-U 1 1 5E3F319B
-P 9150 6450
-F 0 "R40" V 9050 6450 50  0000 C CNN
-F 1 "R" V 9150 6450 50  0000 C CNN
-F 2 "gsg-modules:0603" V 9080 6450 50  0001 C CNN
-F 3 "~" H 9150 6450 50  0001 C CNN
-	1    9150 6450
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR0116
 U 1 1 5E3F6646
 P 8900 6450
@@ -3037,8 +3027,6 @@ F 3 "" H 8900 6450 50  0001 C CNN
 	1    8900 6450
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9000 6450 8900 6450
 Wire Wire Line
 	9300 6450 9350 6450
 Wire Wire Line
@@ -3107,20 +3095,6 @@ NoConn ~ 5650 1500
 NoConn ~ 17750 0   
 Wire Wire Line
 	1750 7600 2600 7600
-$Comp
-L Connector_Generic:Conn_01x05 J12
-U 1 1 5DD5E4BD
-P 13450 4500
-F 0 "J12" H 13530 4587 50  0000 L CNN
-F 1 "Conn_01x05" H 13530 4496 50  0000 L CNN
-F 2 "Connectors_Samtec:SL-105-X-XX_1x05" H 13450 4500 50  0001 C CNN
-F 3 "~" H 13450 4500 50  0001 C CNN
-F 4 "Samtec" H 13450 4500 50  0001 C CNN "Manufacturer"
-F 5 "TSW-105-07-F-S" H 13450 4500 50  0001 C CNN "Part Number"
-F 6 "DNP" H 13530 4405 50  0000 L CNN "Note"
-	1    13450 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	13100 4300 13250 4300
 Wire Wire Line
@@ -3131,4 +3105,85 @@ Wire Wire Line
 	13100 4600 13250 4600
 Wire Wire Line
 	13100 4700 13250 4700
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5DFF8BFA
+P 13250 4300
+F 0 "TP1" V 13250 4488 50  0000 L CNN
+F 1 "TestPoint" V 13295 4488 50  0001 L CNN
+F 2 "gsg-modules:TESTPOINT-50MIL" H 13450 4300 50  0001 C CNN
+F 3 "~" H 13450 4300 50  0001 C CNN
+	1    13250 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5DFF91BE
+P 13300 4450
+F 0 "TP8" V 13300 4638 50  0000 L CNN
+F 1 "TestPoint" V 13345 4638 50  0001 L CNN
+F 2 "gsg-modules:TESTPOINT-50MIL" H 13500 4450 50  0001 C CNN
+F 3 "~" H 13500 4450 50  0001 C CNN
+	1    13300 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5DFF97AD
+P 13350 4600
+F 0 "TP9" V 13350 4788 50  0000 L CNN
+F 1 "TestPoint" V 13395 4788 50  0001 L CNN
+F 2 "gsg-modules:TESTPOINT-50MIL" H 13550 4600 50  0001 C CNN
+F 3 "~" H 13550 4600 50  0001 C CNN
+	1    13350 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP10
+U 1 1 5DFF9EAC
+P 13400 4750
+F 0 "TP10" V 13400 4938 50  0000 L CNN
+F 1 "TestPoint" V 13445 4938 50  0001 L CNN
+F 2 "gsg-modules:TESTPOINT-50MIL" H 13600 4750 50  0001 C CNN
+F 3 "~" H 13600 4750 50  0001 C CNN
+	1    13400 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5DFFA52A
+P 13250 4800
+F 0 "TP7" H 13192 4872 50  0000 R CNN
+F 1 "TestPoint" V 13295 4988 50  0001 L CNN
+F 2 "gsg-modules:TESTPOINT-50MIL" H 13450 4800 50  0001 C CNN
+F 3 "~" H 13450 4800 50  0001 C CNN
+	1    13250 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	13250 4400 13300 4450
+Wire Wire Line
+	13250 4500 13350 4600
+Wire Wire Line
+	13250 4600 13400 4750
+Wire Wire Line
+	13250 4700 13250 4800
+$Comp
+L Device:R R40
+U 1 1 5E06259F
+P 9150 6450
+F 0 "R40" V 9250 6400 50  0000 L CNN
+F 1 "3.33k" V 9150 6350 40  0000 L CNN
+F 2 "gsg-modules:0603" V 9080 6450 50  0001 C CNN
+F 3 "~" H 9150 6450 50  0001 C CNN
+F 4 "Stackpole" H 9150 6450 50  0001 C CNN "Manufacturer"
+F 5 "RMCF0603FG3K32" H 9150 6450 50  0001 C CNN "Part Number"
+F 6 "RES 3.32K OHM 1% 1/10W 0603" H 9150 6450 50  0001 C CNN "Description"
+	1    9150 6450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9000 6450 8900 6450
+Text Notes 8800 7200 0    40   ~ 0
+R40 is set at 3.33k Ohms.\nThis should set the current limit protection\non the digital load switch to roughly\n1.3A.  Test
 $EndSCHEMATC
