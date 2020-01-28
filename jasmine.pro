@@ -1,4 +1,4 @@
-update=Wed 15 May 2019 02:37:26 PM MDT
+update=Fri 18 Oct 2019 01:06:07 PM MDT
 version=1
 last_client=kicad
 [cvpcb]
@@ -37,7 +37,7 @@ ViaDiameter3=1.016
 ViaDrill3=0.508
 ViaDiameter4=1.0668
 ViaDrill4=0.635
-dPairWidth1=0.2
+dPairWidth1=0.232
 dPairGap1=0.25
 dPairViaGap1=0.25
 SilkLineWidth=0.2032
@@ -60,8 +60,8 @@ OthersTextSizeH=1
 OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
-SolderMaskClearance=0.127
-SolderMaskMinWidth=0.25
+SolderMaskClearance=0.01
+SolderMaskMinWidth=0.01
 SolderPasteClearance=0
 SolderPasteRatio=-0.05
 [pcbnew/Layer.F.Cu]
@@ -239,6 +239,16 @@ ViaDiameter=0.762
 ViaDrill=0.3302
 uViaDiameter=0.508
 uViaDrill=0.2032
-dPairWidth=0.2
+dPairWidth=0.232
 dPairGap=0.25
 dPairViaGap=0.25
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=40
+ERC_TestSimilarLabels=1
